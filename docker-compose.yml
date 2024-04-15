@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  duendeadfs.server:
+    image: ${DOCKER_REGISTRY-}duendeadfsserver
+    build:
+      context: .
+      dockerfile: duendeadfs/duendeadfs.Server/Dockerfile
+
+  identityserver:
+    image: ${DOCKER_REGISTRY-}identityserver
+    build:
+      context: .
+      dockerfile: IdentityServer/Dockerfile
+
